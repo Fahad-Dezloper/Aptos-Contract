@@ -10,7 +10,7 @@ module move_addr::Sample1 {
         let string_byte: vector<u8> = b" This is byte";
         print(&value_id);
         print(&string_val);
-        print(utf8(&string_byte));
+        // print(utf8(&string_byte));
         ID
     }
 
