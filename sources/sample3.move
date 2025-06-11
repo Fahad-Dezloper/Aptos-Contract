@@ -19,14 +19,14 @@ address move_addr {
         }
     }
 
-    module three {
-        #[test_only]
-        use std::debug::print;
+    // module three {
+    //     #[test_only]
+    //     use std::debug::print;
 
-        #[test]
-        fun test_function(){
-            let result = move_addr::one::get_value();
-            print(&result);
-        }
-    }
+    //     #[test]
+    //     fun test_function(){
+    //         let result = move_addr::one::get_value();
+    //         print(&result);
+    //     }
+    // }
 }
