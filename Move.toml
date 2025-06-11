@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-move_addr = "ed25519-pub-0xbcaa7522e2db9431bca833ee4263038617b18236c724879069e379354358e8e4"
+move_addr = "c4e4530053b7fd075cb7fa1f95f608ae19bfb7f11bb1a0fa0287b9d6d00134eb"
 
 [dev-addresses]
 
