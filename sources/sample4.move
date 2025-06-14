@@ -1,6 +1,6 @@
 module move_addr::Sample4 {
-    #[test_only]
     use std::debug::print;
+    use std::string::{String, utf8};
 
     fun sample_for_loop(count: u64): u64 {
         let value = 0;
@@ -32,6 +32,13 @@ module move_addr::Sample4 {
         value
     }
 
+    fun sample_abort_error(value: String){
+        if(value == utf8(b"move_addr"))
+            print(&utf8(b"correct"))
+        else
+            abort 123
+    }
+
     #[test]
     fun test_for_loop(){
         let result = sample_for_loop(10);
@@ -48,5 +55,11 @@ module move_addr::Sample4 {
     fun test_loop(){
         let result = sample_loop(10);
         print(&result)
+    }
+
+    #[test]
+    #[expected_failure]
+    fun test_abort(){
+        sample_abort_error(utf8(b"move_addrr"));
     }
 }
